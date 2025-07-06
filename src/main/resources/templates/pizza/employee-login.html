@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/meta-data :: meta-data}">
+</head>
+<body>
+  <div th:replace="~{fragments/navbar :: navbar}"></div>
+  <div th:replace="~{fragments/sidebar :: sidebar}"></div>
+
+  <div class="content-box mt-5">
+    <h2>Employee Login</h2>
+    <p>Please login here</p>
+      <form th:action="@{/process-login}" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div th:if="${param.error}">
+        <p style="color:red;">Invalid username or password.</p>
+      </div>
+      <div th:if="${param.logout}">
+        <p style="color:green;">You have been logged out.</p>
+      </div>
+  </div>
+
+</body>
+</html>

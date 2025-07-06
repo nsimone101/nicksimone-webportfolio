@@ -1,0 +1,37 @@
+body {
+  background-image: url('../images/pizza_background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps it in place when scrolling */
+        padding-top: 80px;
+      margin: 0;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 127px;
+  left: 50%;
+  transform: translateX(-500px);
+  width: 205px;
+  height: 242x;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.content-box {
+  margin-left: calc(50% - 300px + 50px); /* Shift to right of menu + 50px gap */
+  max-width: 800px;
+  background-color: white;
+  padding: 2rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

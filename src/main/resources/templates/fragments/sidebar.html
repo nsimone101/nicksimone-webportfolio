@@ -1,0 +1,16 @@
+<!--fragments/sidebar.html -->
+<div th:fragment="sidebar">
+  <div class="sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza}">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/web-tour}">Site Tour</a></li>
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/order}">Order Pizza</a></li>
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/view-orders}">View Placed Orders</a></li>
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/employee-login}">Employee Login</a></li>
+      <!--
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/view-orders}">Changelog</a></li>
+      <li class="nav-item"><a class="nav-link text-white" th:href="@{/pizza/view-orders}">Data Analysis</a></li>
+      -->
+    </ul>
+  </div>
+</div>
