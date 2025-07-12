@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/meta-data :: meta-data}">
+</head>
+<body>
+  <div th:replace="~{fragments/navbar :: navbar}"></div>
+  <div th:replace="~{fragments/sidebar :: sidebar}"></div>
+
+  <div class="content-box mt-5">
+    <h2>Welcome Valued Employee!</h2>
+
+    <div sec:authorize="hasRole('ROLE_MANAGER')">
+      <h2>For Managers Only</h2>
+      <p>You can view employee salaries and update hourly wages from here.</p>
+    </div>
+
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+      <h2>For Admin Only</h2>
+      <p>You can change employee emails here.</p>
+    </div>
+  </div>
+
+</body>
+</html>

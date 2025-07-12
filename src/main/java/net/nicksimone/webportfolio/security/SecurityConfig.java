@@ -24,13 +24,13 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/pizza/employee-login", "/css/**").permitAll()
-                .requestMatchers("/pizza/view-orders").hasRole("EMPLOYEE")
+                .requestMatchers("/pizza/employee-homepage").hasRole("EMPLOYEE")
                 .anyRequest().permitAll()
             )
             .formLogin(form -> form
                 .loginPage("/pizza/employee-login")
                 .loginProcessingUrl("/process-login")
-                .defaultSuccessUrl("/pizza/view-orders", true)
+                .defaultSuccessUrl("/pizza/employee-homepage", true)
                 .permitAll()
             )
             .logout(logout -> logout

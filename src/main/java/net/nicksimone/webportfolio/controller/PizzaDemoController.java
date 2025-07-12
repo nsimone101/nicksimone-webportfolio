@@ -38,4 +38,10 @@ public class PizzaDemoController {
         model.addAttribute("pageTitle", "Employee Login");
         return "pizza/employee-login";
     }
+
+    @GetMapping("/employee-homepage")
+    public String viewEmployeeHomepage(Model model) {
+        model.addAttribute("pageTitle", "Employee Home");
+        return "pizza/employee-homepage";
+    }
 }
